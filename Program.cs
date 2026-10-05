@@ -1,6 +1,5 @@
 using AssignmentStorer.Data;
 using Microsoft.EntityFrameworkCore;
-using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
 
