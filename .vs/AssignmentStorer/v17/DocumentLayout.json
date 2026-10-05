@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|c:\\users\\sisan\\source\\repos\\assignmentstorer\\assignmentstorer.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|solutionrelative:assignmentstorer.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|c:\\users\\sisan\\source\\repos\\assignmentstorer\\assignmentstorer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|solutionrelative:assignmentstorer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -19,6 +15,14 @@
       "RelativeMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|c:\\users\\sisan\\source\\repos\\assignmentstorer\\views\\assignment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|solutionrelative:views\\assignment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|c:\\users\\sisan\\source\\repos\\assignmentstorer\\assignmentstorer.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|solutionrelative:assignmentstorer.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|c:\\users\\sisan\\source\\repos\\assignmentstorer\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|c:\\users\\sisan\\source\\repos\\assignmentstorer\\views\\assignment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|solutionrelative:views\\assignment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|c:\\users\\sisan\\source\\repos\\assignmentstorer\\views\\assignment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|solutionrelative:views\\assignment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57961BFA-BF36-4A86-877F-23097E9343D0}|AssignmentStorer.csproj|c:\\users\\sisan\\source\\repos\\assignmentstorer\\controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,15 +66,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-29T15:07:41.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Views\\Assignment\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Assignment\\Create.cshtml",
+              "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Views\\Assignment\\Create.cshtml",
+              "RelativeToolTip": "Views\\Assignment\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T19:57:30.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T15:09:12.732Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AssignmentStorer.csproj",
+              "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\AssignmentStorer.csproj",
+              "RelativeDocumentMoniker": "AssignmentStorer.csproj",
+              "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\AssignmentStorer.csproj",
+              "RelativeToolTip": "AssignmentStorer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-29T14:57:08.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T14:31:44.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AssignmentStorer",
               "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\AssignmentStorer.csproj",
               "RelativeDocumentMoniker": "AssignmentStorer.csproj",
@@ -86,76 +151,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Views\\Assignment\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Assignment\\Details.cshtml",
               "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Views\\Assignment\\Details.cshtml",
               "RelativeToolTip": "Views\\Assignment\\Details.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAEsAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAIBJwEsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-03T07:27:50.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T14:31:44.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-29T15:07:41.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Views\\Assignment\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Assignment\\Create.cshtml",
-              "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Views\\Assignment\\Create.cshtml",
-              "RelativeToolTip": "Views\\Assignment\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-29T19:57:30.515Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AssignmentStorer.csproj",
-              "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\AssignmentStorer.csproj",
-              "RelativeDocumentMoniker": "AssignmentStorer.csproj",
-              "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\AssignmentStorer.csproj",
-              "RelativeToolTip": "AssignmentStorer.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-09-29T14:57:08.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAiwA8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T15:09:12.732Z",
+              "WhenOpened": "2026-10-03T07:27:50.801Z",
               "EditorCaption": ""
             },
             {
@@ -168,11 +172,12 @@
               "RelativeToolTip": "Controllers\\AssignmentController.cs",
               "ViewState": "AgIAAHUAAAAAAAAAAAAiwIwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T19:49:15.647Z"
+              "WhenOpened": "2026-09-29T19:49:15.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Views\\Assignment\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Assignment\\Index.cshtml",
@@ -180,7 +185,8 @@
               "RelativeToolTip": "Views\\Assignment\\Index.cshtml",
               "ViewState": "AgIAAFgAAAAAAAAAAAAYwG8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-29T19:52:41.459Z"
+              "WhenOpened": "2026-09-29T19:52:41.459Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -192,7 +198,8 @@
               "RelativeToolTip": "Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-29T20:00:27.856Z"
+              "WhenOpened": "2026-09-29T20:00:27.856Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -204,7 +211,8 @@
               "RelativeToolTip": "Migrations\\20260929201500_AddSubjectAndStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T20:15:01.249Z"
+              "WhenOpened": "2026-09-29T20:15:01.249Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -214,9 +222,10 @@
               "RelativeDocumentMoniker": "Models\\Assignment.cs",
               "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Models\\Assignment.cs",
               "RelativeToolTip": "Models\\Assignment.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA0wBoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwBoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T20:12:59.575Z"
+              "WhenOpened": "2026-09-29T20:12:59.575Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -228,7 +237,8 @@
               "RelativeToolTip": "Migrations\\20260929203712_AddFileFields.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T20:37:13.643Z"
+              "WhenOpened": "2026-09-29T20:37:13.643Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -238,9 +248,14 @@
               "RelativeDocumentMoniker": "Migrations\\20260929151349_InitialCreate.cs",
               "ToolTip": "C:\\Users\\sisan\\source\\repos\\AssignmentStorer\\Migrations\\20260929151349_InitialCreate.cs",
               "RelativeToolTip": "Migrations\\20260929151349_InitialCreate.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T15:13:51.506Z"
+              "WhenOpened": "2026-09-29T15:13:51.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
             }
           ]
         }
