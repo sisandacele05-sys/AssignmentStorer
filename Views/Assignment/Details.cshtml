@@ -1,0 +1,99 @@
+﻿@model AssignmentStorer.Models.Assignment
+
+@{
+    ViewData["Title"] = "Assignment Details";
+}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Assignment Details</h1>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Back to Assignments
+        </a>
+    </div>
+
+    <div class="card shadow">
+
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">@Model.Title</h4>
+        </div>
+
+        <div class="card-body">
+
+            <div class="mb-3">
+                <strong>Assignment Title:</strong>
+                <p>@Model.Title</p>
+            </div>
+
+            <div class="mb-3">
+                <strong>Module:</strong>
+                <p>@Model.Module</p>
+            </div>
+
+            <div class="mb-3">
+                <strong>Description:</strong>
+                <p>@Model.Description</p>
+            </div>
+
+            <div class="mb-3">
+                <strong>Due Date:</strong>
+                <p>@Model.DueDate.ToString("dd MMMM yyyy")</p>
+            </div>
+
+            <div class="mb-3">
+                <strong>Uploaded:</strong>
+                <p>@Model.UploadDate.ToString("dd MMMM yyyy")</p>
+            </div>
+
+            <div class="mb-3">
+                <strong>Assignment File:</strong>
+
+                @if (!string.IsNullOrEmpty(Model.FilePath))
+                {
+                    <br />
+
+                    <a href="@Model.FilePath"
+                       target="_blank"
+                       class="btn btn-success mt-2">
+                        Open Assignment File
+                    </a>
+                }
+                else
+                {
+                    <p class="text-muted">
+                        No file was uploaded.
+                    </p>
+                }
+            </div>
+
+        </div>
+
+        <div class="card-footer">
+
+            <a asp-action="Index"
+               class="btn btn-secondary">
+                Back
+            </a>
+
+            <form asp-action="Delete"
+                  asp-route-id="@Model.AssignmentId"
+                  method="post"
+                  style="display:inline">
+
+                @Html.AntiForgeryToken()
+
+                <button type="submit"
+                        class="btn btn-danger"
+                        onclick="return confirm('Are you sure you want to delete this assignment?');">
+                    Delete Assignment
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
