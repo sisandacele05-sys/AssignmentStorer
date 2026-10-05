@@ -4,13 +4,10 @@ using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Get database connection
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-// Convert Render PostgreSQL URL to Npgsql connection string
 if (!string.IsNullOrWhiteSpace(connectionString) &&
     (connectionString.StartsWith("postgres://") ||
      connectionString.StartsWith("postgresql://")))
@@ -26,9 +23,11 @@ if (!string.IsNullOrWhiteSpace(connectionString) &&
 
     var database = uri.AbsolutePath.TrimStart('/');
 
+    var port = uri.Port > 0 ? uri.Port : 5432;
+
     connectionString =
         $"Host={uri.Host};" +
-        $"Port={uri.Port};" +
+        $"Port={port};" +
         $"Database={database};" +
         $"Username={username};" +
         $"Password={password};" +
@@ -41,7 +40,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
