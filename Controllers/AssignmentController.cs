@@ -1,141 +1,151 @@
-﻿using AssignmentStorer.Data;
-using AssignmentStorer.Models;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace AssignmentStorer.Controllers
 {
     public class AssignmentController : Controller
     {
-        private readonly ApplicationDbContext _context;
-        private readonly IWebHostEnvironment _environment;
+        private static readonly List<Assignment> assignments = new();
 
-        public AssignmentController(
-            ApplicationDbContext context,
-            IWebHostEnvironment environment)
+        public IActionResult Index()
         {
-            _context = context;
-            _environment = environment;
-        }
-
-        // Show all assignments
-        public async Task<IActionResult> Index()
-        {
-            var assignments = await _context.Assignments
-                .OrderByDescending(a => a.UploadDate)
-                .ToListAsync();
-
             return View(assignments);
         }
 
-        // Show assignment details
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var assignment = await _context.Assignments
-                .FirstOrDefaultAsync(a => a.AssignmentId == id);
-
-            if (assignment == null)
-            {
-                return NotFound();
-            }
-
-            return View(assignment);
-        }
-
-        // Show create form
-        [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // Save assignment and file
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(
-            Assignment assignment,
-            IFormFile? assignmentFile)
+        public async Task<IActionResult> Upload(
+            string title,
+            string subject,
+            string description,
+            IFormFile file)
         {
-            if (ModelState.IsValid)
+            string fileName = "";
+
+            if (file != null && file.Length > 0)
             {
-                if (assignmentFile != null && assignmentFile.Length > 0)
+                fileName = Path.GetFileName(file.FileName);
+
+                string uploadsFolder = Path.Combine(
+                    Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "uploads");
+
+                Directory.CreateDirectory(uploadsFolder);
+
+                string filePath = Path.Combine(
+                    uploadsFolder,
+                    fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
                 {
-                    var uploadsFolder = Path.Combine(
-                        _environment.WebRootPath,
-                        "uploads");
-
-                    if (!Directory.Exists(uploadsFolder))
-                    {
-                        Directory.CreateDirectory(uploadsFolder);
-                    }
-
-                    var uniqueFileName =
-                        Guid.NewGuid().ToString() +
-                        Path.GetExtension(assignmentFile.FileName);
-
-                    var filePath = Path.Combine(
-                        uploadsFolder,
-                        uniqueFileName);
-
-                    using (var fileStream = new FileStream(
-                        filePath,
-                        FileMode.Create))
-                    {
-                        await assignmentFile.CopyToAsync(fileStream);
-                    }
-
-                    assignment.FileName = assignmentFile.FileName;
-                    assignment.FilePath = "/uploads/" + uniqueFileName;
-                }
-
-                assignment.UploadDate = DateTime.Now;
-
-                _context.Assignments.Add(assignment);
-
-                await _context.SaveChangesAsync();
-
-                return RedirectToAction(nameof(Index));
-            }
-
-            return View(assignment);
-        }
-
-        // Delete assignment
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var assignment = await _context.Assignments
-                .FindAsync(id);
-
-            if (assignment == null)
-            {
-                return NotFound();
-            }
-
-            // Delete physical file if it exists
-            if (!string.IsNullOrEmpty(assignment.FilePath))
-            {
-                var physicalPath = Path.Combine(
-                    _environment.WebRootPath,
-                    assignment.FilePath.TrimStart('/'));
-
-                if (System.IO.File.Exists(physicalPath))
-                {
-                    System.IO.File.Delete(physicalPath);
+                    await file.CopyToAsync(stream);
                 }
             }
 
-            _context.Assignments.Remove(assignment);
+            assignments.Add(new Assignment
+            {
+                Title = title,
+                Subject = subject,
+                Description = description,
+                FileName = fileName
+            });
 
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index");
         }
+
+        // VIEW FILE
+        public IActionResult ViewFile(string fileName)
+        {
+            if (string.IsNullOrEmpty(fileName))
+            {
+                return NotFound();
+            }
+
+            string filePath = Path.Combine(
+                Directory.GetCurrentDirectory(),
+                "wwwroot",
+                "uploads",
+                fileName);
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound();
+            }
+
+            string contentType = "application/octet-stream";
+
+            string extension = Path.GetExtension(fileName).ToLower();
+
+            if (extension == ".pdf")
+                contentType = "application/pdf";
+            else if (extension == ".jpg" || extension == ".jpeg")
+                contentType = "image/jpeg";
+            else if (extension == ".png")
+                contentType = "image/png";
+
+            return PhysicalFile(filePath, contentType);
+        }
+
+        // DOWNLOAD FILE
+        public IActionResult Download(string fileName)
+        {
+            if (string.IsNullOrEmpty(fileName))
+            {
+                return NotFound();
+            }
+
+            string filePath = Path.Combine(
+                Directory.GetCurrentDirectory(),
+                "wwwroot",
+                "uploads",
+                fileName);
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound();
+            }
+
+            return PhysicalFile(
+                filePath,
+                "application/octet-stream",
+                fileName);
+        }
+
+        // DELETE ASSIGNMENT
+        [HttpPost]
+        public IActionResult Delete(string fileName)
+        {
+            var assignment = assignments.FirstOrDefault(
+                a => a.FileName == fileName);
+
+            if (assignment != null)
+            {
+                assignments.Remove(assignment);
+            }
+
+            if (!string.IsNullOrEmpty(fileName))
+            {
+                string filePath = Path.Combine(
+                    Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "uploads",
+                    fileName);
+
+                if (System.IO.File.Exists(filePath))
+                {
+                    System.IO.File.Delete(filePath);
+                }
+            }
+
+            return RedirectToAction("Index");
+        }
+    }
+
+    public class Assignment
+    {
+        public string Title { get; set; } = "";
+        public string Subject { get; set; } = "";
+        public string Description { get; set; } = "";
+        public string FileName { get; set; } = "";
     }
 }
